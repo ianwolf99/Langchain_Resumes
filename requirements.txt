@@ -1,0 +1,13 @@
+openai
+langchain
+PyPDF2
+PyCryptodome
+django
+langchain_community
+langchain_openai
+tiktoken
+unstructured[pdf]
+chromadb
+opencv-python-headless
+xlrd 
+openpyxl
