@@ -83,6 +83,7 @@
             border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
+			
         }
         .greeting-section h3, .overview-section h3 {
             margin-bottom: 20px;
@@ -96,6 +97,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+			cursor: pointer;
         }
         .greeting-section ul li i, .overview-section ul li i {
             margin-right: 10px;
@@ -236,15 +238,15 @@
                             <div class="col-md-6">
                                
                                 <div class="overview-section">
-                                    <h3 class="text-center">Overview of assistance </h3>
-                                    <ul class="text-center">
-                                        <li><i class="bi bi-cloud-sun"></i>What is shiftenant?</li>
-                                        <li><i class="bi bi-currency-dollar"></i>Explain about Paybill Account Manager</li>
-                                        <li><i class="bi bi-journal-check"></i> How to get started on Resurface media?</li>
-                                        <li><i class="bi bi-calculator"></i>How can shiftech Africa make my business grow?</li>
-                                    </ul>
-                                    
-                                </div>
+    <h3 class="text-center">Overview of assistance</h3>
+    <ul class="text-center">
+        <li data-question="What is shiftenant?" onclick="askQuestion(this)"><i class="bi bi-cloud-sun"></i>What is shiftenant?</li>
+        <li data-question="Explain about Paybill Account Manager" onclick="askQuestion(this)"><i class="bi bi-currency-dollar"></i>Explain about Paybill Account Manager</li>
+        <li data-question="How to get started on Resurface media?" onclick="askQuestion(this)"><i class="bi bi-journal-check"></i> How to get started on Resurface media?</li>
+        <li data-question="How can Shiftech Africa make my business grow?" onclick="askQuestion(this)"><i class="bi bi-calculator"></i>How can Shiftech Africa make my business grow?</li>
+    </ul>
+</div>
+
                             </div>
                         </div>
                     </div> 
@@ -287,6 +289,16 @@
             </div>
         </div>
     </div>
+	<script>
+    function askQuestion(element) {
+        var question = element.getAttribute('data-question');
+        var inputField = document.querySelector('input[name="input_text"]');
+        var form = document.querySelector('form');
+        
+        inputField.value = question; // Set the input field value to the question
+        form.submit(); // Submit the form
+    }
+</script>
 
     
     <script>

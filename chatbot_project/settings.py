@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t698)2krmf&ztubu@2v(oc0nn=vv-+m**!vh-&*a3j$y+))h1d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["chat.shiftechafrica.com"]
+ALLOWED_HOSTS = ["chat.shiftechafrica.com", "127.0.0.1",]
 os.environ["OPENAI_API_KEY"] = "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"
 
 
@@ -54,7 +54,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    'https://app.crunchthenumbers.co.ke',
+    #'https://app.crunchthenumbers.co.ke',
+    #'http://127.0.0.1:8000',
     # Add other allowed origins if needed
 ]
 ROOT_URLCONF = 'chatbot_project.urls'
