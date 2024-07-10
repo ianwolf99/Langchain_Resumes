@@ -11,3 +11,5 @@ chromadb
 opencv-python-headless
 xlrd 
 openpyxl
+django-cors-headers
+markdown2
