@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t698)2krmf&ztubu@2v(oc0nn=vv-+m**!vh-&*a3j$y+))h1d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["chat.shiftechafrica.com"]
 os.environ["OPENAI_API_KEY"] = "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"
 
 
