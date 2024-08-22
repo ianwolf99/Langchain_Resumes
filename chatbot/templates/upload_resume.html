@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .file-input {
+            margin-top: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            background-color: #3273dc;
+            color: #fff;
+            border: none;
+        }
+        .button:hover {
+            background-color: #275a8f;
+        }
+        .notification {
+            display: none;
+            margin-top: 20px;
+        }
+        .notification.is-success {
+            background-color: #e0f7fa;
+            color: #00796b;
+            border-color: #004d40;
+        }
+        .notification.is-success .delete {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title has-text-centered">Upload Your Resume</h1>
+        <p class="subtitle has-text-centered">Please upload your resume file below. Make sure it is a PDF,WORD or TXT file and is up-to-date with your latest information.</p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="field">
+                <label class="label">Resume File</label>
+                <div class="control file-input">
+                    <input class="input" type="file" name="resume" accept=".pdf" required>
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-primary is-fullwidth" type="submit">Upload</button>
+            </div>
+        </form>
+        {% if message %}
+        <div class="notification is-success">
+            <button class="delete"></button>
+            {{ message }}
+        </div>
+        {% endif %}
+    </div>
+    <script>
+        document.querySelector('.delete').addEventListener('click', function() {
+            this.parentElement.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

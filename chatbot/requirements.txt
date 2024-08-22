@@ -1,9 +1,11 @@
-openai
+tensorflow
+markdown2
 langchain
 PyPDF2
 PyCryptodome
 django
 langchain_community
+langchain_huggingface
 langchain_openai
 tiktoken
 unstructured[pdf]

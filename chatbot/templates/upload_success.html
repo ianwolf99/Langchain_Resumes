@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Successful</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .button {
+            margin-top: 20px;
+            background-color: #3273dc;
+            color: #fff;
+            border: none;
+        }
+        .button:hover {
+            background-color: #275a8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Upload Successful</h1>
+        <p class="subtitle">Your resume has been uploaded successfully!</p>
+        <a href="{% url 'upload_resume' %}" class="button is-primary">Upload Another Resume</a>
+    </div>
+</body>
+</html>

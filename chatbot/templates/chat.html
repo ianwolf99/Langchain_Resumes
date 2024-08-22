@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiftech Assistant</title>
+    <title>Resume Parser</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
     {% load static %} <!-- Load static files -->
-    <link rel="icon" type="image/png" href="/static/img/logo.png">
+    <link rel="icon" type="image/png" href="/static/img/logo1.png">
     <style>
         /* Custom styles here */
         body {
@@ -18,7 +18,7 @@
             height: auto;
         }
         .background-image {
-            background-image: url("https://alphabet.nyc3.cdn.digitaloceanspaces.com/chatbot/shiftechafrica.png");
+            background-image: url("https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -213,7 +213,7 @@
                     <div class="chat-header">
                         <div class="logo text-center">
                             <!-- Your logo goes here -->
-                            <img src="{% static 'img/logo.png' %}" alt="Logo" class="img-fluid">
+                            <img src="{% static 'img/logo1.png' %}" alt="Logo" class="img-fluid">
                         </div>
                         
                         
@@ -226,7 +226,7 @@
                                
                                 <div class="greeting-section">
                                     <h3 class="text-center">Hello There &#128075;</h3>
-                                    <p class="text-center">Welcome to our shiftech Africa assistance bot &#128187;. I'm here to help with tasks and information about Shiftech  <a target="_blank" href="https://shiftechafrica.com/">Read more</a></p>
+                                    <p class="text-center">Welcome to our Resume Parsing AI  &#128187;. I'm here to help with parsing resumes for the HR department </p>
                                     <p class="text-center">Please chat with your preferred language:</p>
                                     
                                     <div class="language-options">
@@ -243,10 +243,9 @@
                                 <div class="overview-section">
     <h3 class="text-center">Overview of assistance</h3>
     <ul class="text-center">
-        <li data-question="What is shiftenant?" onclick="askQuestion(this)"><i class="bi bi-cloud-sun"></i>What is shiftenant?</li>
-        <li data-question="Explain about Paybill Account Manager" onclick="askQuestion(this)"><i class="bi bi-currency-dollar"></i>Explain about Paybill Account Manager</li>
-        <li data-question="How to get started on Resurface media?" onclick="askQuestion(this)"><i class="bi bi-journal-check"></i> How to get started on Resurface media?</li>
-        <li data-question="How can Shiftech Africa make my business grow?" onclick="askQuestion(this)"><i class="bi bi-calculator"></i>How can Shiftech Africa make my business grow?</li>
+        <li data-question="Parse uploaded resumes" ><i class="bi bi-cloud-sun"></i>Power of LLMS?</li>
+        <li data-question="Explain about Paybill Account Manager"><i class="bi bi-currency-dollar"></i>Application of AI to HR</li>
+        
     </ul>
 </div>
 
@@ -292,16 +291,7 @@
             </div>
         </div>
     </div>
-	<script>
-    function askQuestion(element) {
-        var question = element.getAttribute('data-question');
-        var inputField = document.querySelector('input[name="input_text"]');
-        var form = document.querySelector('form');
-        
-        inputField.value = question; // Set the input field value to the question
-        form.submit(); // Submit the form
-    }
-</script>
+	
 
     
     <script>
@@ -339,8 +329,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <footer class="text-center mt-5 py-4 bg-light">
     <div class="container">
-        <p class="mb-1">Copyright © 2024 - Shiftech Africa Assistance bot. All Rights Reserved.</p>
-        <p class="mb-0">Powered By <a href="https://shiftechafrica.com/" class="text-primary" target="_blank">SHIFTECH AFRICA</a>.</p>
+        <p class="mb-1">Copyright © 2024 - Resume Parsing for HR. All Rights Reserved.</p>
+        <p class="mb-0">Powered By <a href="#" class="text-primary" target="_blank">AI Assistant</a>.</p>
     </div>
 </footer>
 </body>
