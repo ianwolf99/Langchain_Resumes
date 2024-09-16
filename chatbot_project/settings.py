@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-t698)2krmf&ztubu@2v(oc0nn=vv-+m**!vh-&*a3j$y+))h1d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["chat.shiftechafrica.com", "127.0.0.1",]
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "use yours"
 
 
 # Application definition
