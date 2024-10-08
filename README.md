@@ -1,4 +1,4 @@
 
 
 # ResumerParser
-Automate parsing of resumes using Langchaij for HRs
+Automate parsing of resumes using Langchain and llms  for HRs.
